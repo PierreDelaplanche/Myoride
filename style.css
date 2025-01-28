@@ -22,79 +22,135 @@ html {
 header {
     nav{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        div {
+            display:flex;
+            flex-direction: row;
+            gap:30px;
+            align-items: center;
+            button {
+                height: 30px;
+                width:100px;
+            }
+        }
+        img{
+            width: 200px;
+            height: 50px;
+        }
     }
     a{
         text-decoration: none;
     }
 }
+
 button{
-     width: 100px;
-     height: 30px;
- }
+     border-radius: var(--border-radius);
+     border:none;
+     background-color: var(--primary-color);
+     color: var(--white-color);
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition-duration: 300ms;
+}
+
+section {
+    border-top: 1px solid var(--primary-color);
+}
+
+#hero-section{
+    background-image: url("medias/voiture-header.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 600px;
+    div {
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white-color);
+        h1 {
+            font-size: 4em;
+            margin:0;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        button {
+            margin-top: 20px;
+            width: 150px;
+            height: 40px;
+            font-size: 1.1em;
+        }
+    }
+}
 
 #hero-section, #vehicules, #tuto, #avisclients, #partenaires{
     width:100%;
     padding-top:50px;
     padding-bottom:50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-    border: 1px solid var(--black-color);
-    p, h3 {
-        margin:0;
-        max-width:700px;
-    }
-    .cards {
-        list-style: none;
-        display:flex;
-        flex-direction:row;
-        flex-wrap: wrap;
-        justify-content: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 30px;
-        padding:0;
-        .card {
-            width: 250px;
-            background-color: var(--secondary-color);
-            border-radius: var(--border-radius);
-            box-shadow: 0 0 5px black;
-            ul {
-                padding: 0;
-                list-style: none;
-                height:80%;
-                width:80%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding:10%;
-                gap:20px;
-                .img-vehicule {
-                    max-width: 200px;
-                }
-                .img-tuto {
-                    max-width: 100px;
-                }
-                .img-avis {
-                    max-width: 130px;
-                    border: 1px solid #303030;
-                    border-radius: 200px;
-                }
-                p {
-                    margin:0;
-                }
-                .nom-vehicule {
-                    font-weight: bold;
-                    font-size:1.1em;
-                }
-                .nom {
-                    font-weight: bold;
-                    font-size:1.1em;
-                    color: var(--primary-color);
-                }
-                .star {
-                    max-width:150px;
+        text-align: center;
+        p, h3 {
+            margin:0;
+            max-width:700px;
+        }
+        .cards {
+            list-style: none;
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding:0;
+            .card {
+                width: 300px;
+                background-color: var(--secondary-color);
+                border-radius: var(--border-radius);
+                box-shadow: 0 0 5px black;
+                ul {
+                    padding: 0;
+                    list-style: none;
+                    height:80%;
+                    width:80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding:10%;
+                    gap:20px;
+                    .img-vehicule {
+                        max-width: 200px;
+                    }
+                    .img-tuto {
+                        max-width: 100px;
+                    }
+                    .img-avis {
+                        max-width: 130px;
+                        border: 1px solid #303030;
+                        border-radius: 200px;
+                    }
+                    p {
+                        margin:0;
+                    }
+                    .nom-vehicule {
+                        font-weight: bold;
+                        font-size:1.1em;
+                    }
+                    .nom {
+                        font-weight: bold;
+                        font-size:1.1em;
+                        color: var(--primary-color);
+                    }
+                    .star {
+                        max-width:150px;
+                    }
                 }
             }
         }
@@ -105,10 +161,14 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
     #section{
         display: flex;
         justify-content: space-evenly;
         gap: 100px;
+        img{
+            max-width: 200px;
+        }
     }
     #cta{
         display: flex;
@@ -117,22 +177,54 @@ button{
         align-items: center;
         flex-wrap: wrap;
         p{
-            max-width: 250px;
+            max-width: 450px;
         }
     }
-    img{
-        height: 400px;
+    li{
+        list-style: none;
+    }
+    button {
+        height: 30px;
+        width: 120px;
+        font-size: 1.1em;
     }
 }
 
-#avisclient {
-    
-}
 
 #partenaires{
     div{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        gap: 50px;
+    }
+    img{
+        width: 40px;
+        height: 40px;
     }
 }
+footer{
+    width: 100%;
+    background-color: #4d74d7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    p{
+        width: 100px;
+    }
+    #formulaire{
+        width: 100px;
+    }
+}
+
