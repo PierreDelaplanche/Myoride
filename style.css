@@ -1,4 +1,138 @@
+:root {
+    --primary-color: #1240B5; /* Couleur principale */
+    --white-color: #f8f8f8; /* Blanc */
+    --black-color: #303030; /* Noir */
+    --border-radius: 10px; /* Rayon des bordures */
+}
+
+
 html {
-    background-color: black;
-    color: beige;
+    background-color: var(--secondary-color);
+    color: #303030;
+    margin:0;
+    padding:0;
+    h3 {
+        font-size:1.8em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+}
+
+header {
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+button{
+     width: 100px;
+     height: 30px;
+ }
+
+#hero-section, #vehicules, #tuto, #avisclients, #partenaires{
+    width:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    border: 1px solid var(--black-color);
+    p, h3 {
+        margin:0;
+        max-width:700px;
+    }
+    .cards {
+        list-style: none;
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding:0;
+        .card {
+            width: 250px;
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 0 5px black;
+            ul {
+                padding: 0;
+                list-style: none;
+                height:80%;
+                width:80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding:10%;
+                gap:20px;
+                .img-vehicule {
+                    max-width: 200px;
+                }
+                .img-tuto {
+                    max-width: 100px;
+                }
+                .img-avis {
+                    max-width: 130px;
+                    border: 1px solid #303030;
+                    border-radius: 200px;
+                }
+                p {
+                    margin:0;
+                }
+                .nom-vehicule {
+                    font-weight: bold;
+                    font-size:1.1em;
+                }
+                .nom {
+                    font-weight: bold;
+                    font-size:1.1em;
+                    color: var(--primary-color);
+                }
+                .star {
+                    max-width:150px;
+                }
+            }
+        }
+    }
+}
+
+#fonctionnalites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #section{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 100px;
+    }
+    #cta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        p{
+            max-width: 250px;
+        }
+    }
+    img{
+        height: 400px;
+    }
+}
+
+#avisclient {
+    
+}
+
+#partenaires{
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
