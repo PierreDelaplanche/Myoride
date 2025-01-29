@@ -2,7 +2,7 @@
     --primary-color: #1240B5; /* Couleur principale */
     --white-color: #f8f8f8; /* Blanc */
     --black-color: #303030; /* Noir */
-    --border-radius: 7px; /* Rayon des bordures */
+    --border-radius: 0.5em; /* Rayon des bordures */
 }
 
 body {
@@ -11,12 +11,10 @@ body {
     margin:0;
     padding:0;
     font-family: "Inter", serif;
+    font-size: 15px;
     h3 {
         font-size:1.8em;
         margin:0;
-    }
-    p {
-        font-size: 1.1em;
     }
 }
 
@@ -30,9 +28,9 @@ header {
         }
         div {
             display:flex;
-            margin-right:20px;
+            margin-right: 1.3em;
             flex-direction: row;
-            gap:30px;
+            gap:2em;
             align-items: center;
             .button {
                 p {
@@ -41,9 +39,9 @@ header {
             }
         }
         img{
-            width: 200px;
-            height: 50px;
-            padding: 10px;
+            width: 13.3em;
+            height: 3.3em;
+            padding: 0.6em;
         }
     }
 }
@@ -59,7 +57,7 @@ a{
     background-color: var(--primary-color);
     color: var(--white-color);
     text-decoration: none;
-    padding:10px 15px;
+    padding:0.6em 1em;
     p {
         margin:0;
     }
@@ -75,6 +73,7 @@ a{
     background-size: 100%;
     background-repeat: no-repeat;
     height: 120vh;
+    max-height:64vw;
     div {
         text-align: center;
         height: 100%;
@@ -91,7 +90,7 @@ a{
             font-size: 1.5em;
         }
         .button {
-            margin-top: 20px;
+            margin-top: 1.3em;
             font-size: 1.1em;
         }
     }
@@ -99,17 +98,17 @@ a{
 
 #vehicules, #tuto, #avisclients {
     width:100%;
-    padding-top:50px;
-    padding-bottom:50px;
+    padding-top:3.3em;
+    padding-bottom:3.3em;
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 2em;
         text-align: center;
         p, h3 {
             margin:0;
-            max-width:700px;
+            max-width:46.6em;
         }
         .cards {
             list-style: none;
@@ -117,13 +116,13 @@ a{
             flex-direction:row;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 2em;
             padding:0;
             .card {
-                width: 300px;
+                width: 20em;
                 background-color: var(--secondary-color);
                 border-radius: var(--border-radius);
-                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.285);
+                box-shadow: 0 3px 0.6em rgba(0, 0, 0, 0.285);
                 ul {
                     padding: 0;
                     list-style: none;
@@ -133,17 +132,17 @@ a{
                     flex-direction: column;
                     align-items: center;
                     padding:10%;
-                    gap:20px;
+                    gap:1.3em;
                     .img-vehicule {
-                        max-width: 200px;
+                        max-width: 13.3em;
                     }
                     .img-tuto {
-                        max-width: 100px;
+                        max-width: 6.6em;
                     }
                     .img-avis {
-                        max-width: 130px;
+                        max-width: 8.6em;
                         border: 1px solid #303030;
-                        border-radius: 200px;
+                        border-radius: 13.3em;
                     }
                     p {
                         margin:0;
@@ -158,7 +157,7 @@ a{
                         color: var(--primary-color);
                     }
                     .star {
-                        max-width:150px;
+                        max-width:10em;
                     }
                 }
             }
@@ -170,16 +169,16 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 3.3em;
+    padding-top: 3.3em;
     background-color: #F8F8F8;
     
     #section{
         display: flex;
         justify-content: space-evenly;
-        gap: 100px;
+        gap: 6.6em;
         img{
-            max-width: 200px;
+            max-width: 13.3em;
         }
     }
     #cta{
@@ -189,7 +188,7 @@ a{
         align-items: center;
         flex-wrap: wrap;
         p{
-            max-width: 450px;
+            max-width: 30em;
         }
     }
     li{
@@ -204,18 +203,18 @@ a{
 #partenaires{
     width:100%;
     text-align:center;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 3.3em;
+    padding-top: 3.3em;
     div{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 70px;
-        padding-top: 25px;
+        gap: 4.6em;
+        padding-top: 1.6em;
     }
     img{
-        width: 40px;
-        height: 40px;
+        width: 2.6em;
+        height: 2.6em;
     }
 }
 
@@ -225,16 +224,22 @@ footer{
     color: white;
     display: flex;
     justify-content: space-around;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 3.3em;
+    padding-top: 3.3em;
     form{
         display: flex;
         flex-direction: column;
     }
     a{
         img{
-            width: 40px;
-            height: 40px;
+            width: 2.6em;
+            height: 2.6em;
+        }
+    }
+    a:hover {
+        img {
+            transform: scale(1.05);
+            transition-duration: 400ms;
         }
     }
     p{
@@ -247,7 +252,7 @@ footer{
         
         button {
             background-color: black;
-            margin-top: 15px;
+            margin-top: 1em;
             border: none;
             font-size:0.7em;
             border-radius: var(--border-radius);
@@ -259,7 +264,7 @@ footer{
             transition-duration: 400ms;
         }
         form{
-            gap: 15px;
+            gap: 1em;
         }
     }
     ol{
@@ -267,9 +272,137 @@ footer{
         flex-direction: column;
         align-items: center;
         list-style: none;
-        gap: 10px;
+        gap: 0.6em;
     }
 }
 #avisclients{
     background-color: #F8F8F8;
+}
+
+
+@media (min-width:1800px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:1800px) {
+    body {
+        font-size: 19px;
+    }
+}
+
+@media (max-width:1650px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:1500px) {
+    body {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:1350px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:1200px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:1050px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:900px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:750px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+
+/* DOCUMENTATION */
+
+#introduction, #qui, #pourquoi, #comment, #avecquoi, #quoi, #ensuite{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    gap: 20px;
+    p{
+        width: 400px;
+    }
+}
+
+#titre{
+    display: flex;
+    justify-content: center;
+    color: #1240B5;
+}
+#introduction{
+    padding-bottom:50px;
+    padding-top: 0;
+    h3 {
+        margin-top: 50px;
+    }
+    
+    .background{
+        position: absolute;
+        transform: rotate(180deg);
+        background-image: url("medias/bleu1.png");
+        width: 100%;
+        min-height: 600px;
+        z-index: -100;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100vw;
+    }
+}
+
+#qui{
+    background-image: url("medias/bleu2et5.png");
+}
+#pourquoi{
+    background-image: url("medias/bleu6.png");
+}
+#comment{
+    background-image: url("medias/bleu4.png");
+    color: white;
+}
+#avecquoi{
+    background-image: url("medias/bleu2et5.png");
+}
+#quoi{
+    background-image: url("medias/bleu6.png");
+}
+#ensuite{
+    padding: 0;
+    .background{
+        position: absolute;
+        transform: rotate(180deg);
+        background-image: url("medias/bleu3et7.png");
+        width: 100%;
+        min-height: 400px;
+        z-index: -100;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100vw;
+    }
 }
