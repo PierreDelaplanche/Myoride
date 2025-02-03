@@ -20,13 +20,16 @@ body {
 
 header {
     nav{
-        
+        width:100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        position: fixed;
+        top:0px;
         p {
             color: var(--primary-color);
         }
         div {
+            max-width:100%;
             display:flex;
             margin-right: 1.3em;
             flex-direction: row;
@@ -44,6 +47,12 @@ header {
             padding: 0.6em;
         }
     }
+}
+.nav{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: var(--border-radius);
 }
 a{
     text-decoration: none;
@@ -85,6 +94,8 @@ a{
         h1 {
             font-size: 4em;
             margin:0;
+            margin-left: 20%;
+            margin-right:20%;
         }
         h2 {
             font-size: 1.5em;
@@ -106,6 +117,10 @@ a{
         align-items: center;
         gap: 2em;
         text-align: center;
+        .txt-vehicule {
+            margin-left:10%;
+            margin-right:10%;
+        }
         p, h3 {
             margin:0;
             max-width:46.6em;
@@ -164,6 +179,13 @@ a{
         }
     }
 }
+#tuto {
+    background-color: #F8F8F8;
+}
+
+#vehicules{
+    background-color: #F8F8F8;
+}
 
 #fonctionnalites{
     display: flex;
@@ -171,7 +193,6 @@ a{
     align-items: center;
     padding-bottom: 3.3em;
     padding-top: 3.3em;
-    background-color: #F8F8F8;
     
     #section{
         display: flex;
@@ -205,6 +226,7 @@ a{
     text-align:center;
     padding-bottom: 3.3em;
     padding-top: 3.3em;
+    background-color: #F8F8F8;
     div{
         display: flex;
         flex-direction: row;
@@ -224,6 +246,8 @@ footer{
     color: white;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1em;
     padding-bottom: 3.3em;
     padding-top: 3.3em;
     form{
@@ -243,21 +267,28 @@ footer{
         }
     }
     p{
-        width: 100px;
+        width: 6.67em;
     }
     #formulaire{
         display: flex;
         flex-direction: column;
-        width: 100px;
-        
+        align-items: center;
+        justify-content: center;
+        width: 15em;
+        div {
+            display: flex;
+            flex-direction: column;
+            gap:0.3em;
+        }
         button {
             background-color: black;
             margin-top: 1em;
             border: none;
-            font-size:0.7em;
+            font-size:1em;
             border-radius: var(--border-radius);
             color:var(--white-color);
-            padding:10px;
+            padding:0.67em;
+            width:70%;
         }
         button:hover {
             transform: scale(1.05);
@@ -269,16 +300,13 @@ footer{
     }
     ol{
         display: flex;
+        padding:0;
         flex-direction: column;
         align-items: center;
         list-style: none;
         gap: 0.6em;
     }
 }
-#avisclients{
-    background-color: #F8F8F8;
-}
-
 
 @media (min-width:1800px) {
     body {
@@ -334,6 +362,29 @@ footer{
     }
 }
 
+@media (max-width:450px) {
+    #hero-section {
+        div {
+            h1 {
+                font-size: 3em;
+                margin:0;
+            }
+        }
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    #hero-section {
+        margin-top:4em;
+    }
+    #fonctionnalites {
+        #section {
+            gap:0;
+        }
+    }
+}
+
 
 /* DOCUMENTATION */
 
@@ -377,32 +428,45 @@ footer{
 }
 
 #qui{
-    background-image: url("medias/bleu2et5.png");
+    background-color: #1240B5;
+    color: white;
+    
 }
 #pourquoi{
-    background-image: url("medias/bleu6.png");
+    background-color: #8FB8DE;
 }
 #comment{
-    background-image: url("medias/bleu4.png");
-    color: white;
+    background-color: #ccf7f7;
 }
 #avecquoi{
-    background-image: url("medias/bleu2et5.png");
+    background-color: #1240B5;
+    color: white;
+    img{
+        width: 40px;
+    }
 }
 #quoi{
-    background-image: url("medias/bleu6.png");
+    background-color: #8FB8DE;
 }
 #ensuite{
-    padding: 0;
-    .background{
-        position: absolute;
-        transform: rotate(180deg);
-        background-image: url("medias/bleu3et7.png");
-        width: 100%;
-        min-height: 400px;
-        z-index: -100;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100vw;
+    padding-top: 0;
+    background-color: #ccf7f7;
+    h3 {
+        margin-top: 50px;
     }
+}
+#prototype{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}
+#logo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
