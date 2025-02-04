@@ -2,7 +2,7 @@
     --primary-color: #1240B5; /* Couleur principale */
     --white-color: #f8f8f8; /* Blanc */
     --black-color: #303030; /* Noir */
-    --border-radius: 0.5em; /* Rayon des bordures */
+    --border-radius: 25px; /* Rayon des bordures */
 }
 
 body {
@@ -25,17 +25,18 @@ header {
         justify-content: center;
         position: fixed;
         top:0px;
+        z-index: 2;
         p {
             color: var(--primary-color);
         }
         div {
             max-width:100%;
             display:flex;
-            margin-right: 1.3em;
             flex-direction: row;
             gap:2em;
             align-items: center;
             .button {
+                margin-right: 1.3em;
                 p {
                     color:var(--white-color);
                 }
@@ -53,6 +54,8 @@ header {
     display: flex;
     justify-content: center;
     border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px #0000001f;
+    
 }
 a{
     text-decoration: none;
@@ -78,12 +81,13 @@ a{
 }
 
 #hero-section{
-    background-image: url("medias/voiture-header.png");
+    background-image: linear-gradient(#5fcfeb14, #05072580), url(medias/voiture-header.png);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 120vh;
     max-height:64vw;
     div {
+        margin: 0 10%;
         text-align: center;
         height: 100%;
         display: flex;
@@ -137,7 +141,8 @@ a{
                 width: 20em;
                 background-color: var(--secondary-color);
                 border-radius: var(--border-radius);
-                box-shadow: 0 3px 0.6em rgba(0, 0, 0, 0.285);
+                box-shadow: 0 2px 13px rgba(0, 0, 0, 0.08);
+                border : 1px solid rgba(0, 0, 0, 0.055);
                 ul {
                     padding: 0;
                     list-style: none;
@@ -184,7 +189,7 @@ a{
 }
 
 #vehicules{
-    background-color: #F8F8F8;
+    background-color: white;
 }
 
 #fonctionnalites{
@@ -193,6 +198,7 @@ a{
     align-items: center;
     padding-bottom: 3.3em;
     padding-top: 3.3em;
+    background-color: #F8F8F8;
     
     #section{
         display: flex;
@@ -240,6 +246,10 @@ a{
     }
 }
 
+.footerindex {
+    padding-top:3em;
+}
+
 footer{
     width: 100%;
     background-color: #4d74d7;
@@ -249,7 +259,7 @@ footer{
     flex-wrap: wrap;
     gap:1em;
     padding-bottom: 3.3em;
-    padding-top: 3.3em;
+    padding-top: 0;
     form{
         display: flex;
         flex-direction: column;
@@ -359,10 +369,26 @@ footer{
 @media (max-width:750px) {
     body {
         font-size: 12px;
+        #avecquoi {
+            p {
+                width:29em;
+            }
+        }
     }
 }
 
 @media (max-width:450px) {
+    header {
+        width:100vw;
+        nav {
+            div {
+                gap:0;
+                div {
+                    gap:1em;
+                }
+            }
+        }
+    }
     #hero-section {
         div {
             h1 {
@@ -383,22 +409,41 @@ footer{
             gap:0;
         }
     }
+    #avecquoi {
+        p {
+            width:26.6em;
+        }
+    }
 }
 
 
 /* DOCUMENTATION */
 
 #introduction, #qui, #pourquoi, #comment, #avecquoi, #quoi, #ensuite{
+    width:100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 3.3em 0;
     background-size: 100vw;
     background-repeat: no-repeat;
     background-position: center;
-    gap: 20px;
+    gap: 1.3em;
     p{
-        width: 400px;
+        width: 26.6em;
+    }
+    img{
+        width: 20em;
+        border-radius: var(--border-radius);
+    }
+    div{
+        margin-left:10%;
+        margin-right:10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6.6em;
+        align-items: center;
     }
 }
 
@@ -419,7 +464,7 @@ footer{
         transform: rotate(180deg);
         background-image: url("medias/bleu1.png");
         width: 100%;
-        min-height: 600px;
+        min-height: 40em;
         z-index: -100;
         background-repeat: no-repeat;
         background-position: center;
@@ -429,30 +474,57 @@ footer{
 
 #qui{
     background-color: #1240B5;
-    color: white;
-    
+    color: white; 
+    padding: 120px 0;
+    position: relative;
 }
 #pourquoi{
     background-color: #8FB8DE;
 }
 #comment{
     background-color: #ccf7f7;
+    img{
+        width: 10em;
+    }
+    p{
+        min-width:50%;
+        max-width:70%;
+    }
 }
 #avecquoi{
     background-color: #1240B5;
     color: white;
-    img{
-        width: 40px;
+    #divavecquoi {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1em;
+        .logoag{
+            width: 6.6em;
+            height:6.6em;
+        }
+    }
+    p{
+        width: 36em;
     }
 }
+
+
 #quoi{
     background-color: #8FB8DE;
+    p{
+        width: 30.6em;
+    }
 }
 #ensuite{
     padding-top: 0;
     background-color: #ccf7f7;
     h3 {
-        margin-top: 50px;
+        margin-top: 3.3em;
+    }
+    div{
+        flex-direction: row-reverse;
     }
 }
 #prototype{
@@ -461,12 +533,48 @@ footer{
     align-items: center;
     flex-direction: column;
     h3 {
-        margin-bottom: 50px;
-        margin-top: 50px;
+        margin-bottom: 3.3em;
+        margin-top: 3.3em;
     }
 }
 #logo {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.3em;
+}
+.custom-shape-divider-top-1738663591 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+.custom-shape-divider-top-1738663591 svg {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1738663591 .shape-fill {
+    fill: var(--primary-color)
+}
+.custom-shape-divider-bottom-1738666986 {
+   
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1738666986 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 74px;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1738666986 .shape-fill {
+    fill: #CCF7F7
 }
